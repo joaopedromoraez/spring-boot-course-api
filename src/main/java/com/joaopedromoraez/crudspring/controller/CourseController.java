@@ -1,11 +1,10 @@
 package com.joaopedromoraez.crudspring.controller;
+
 import com.joaopedromoraez.crudspring.model.Course;
 import com.joaopedromoraez.crudspring.repository.CourseRepository;
-
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +18,11 @@ public class CourseController {
     @GetMapping
     public List<Course> list() {
         return courseRepository.findAll();
+    }
+
+    @PostMapping
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public Course create(@RequestBody Course course) {
+        return courseRepository.save(course);
     }
 }
