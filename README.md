@@ -21,4 +21,4 @@ mvn spring-boot:run
 
 ## Copyright
 
-<!-- Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file. -->
+Released under the MIT License. See the [LICENSE](https://github.com/joaopedromoraez/spring-boot-course-api/blob/main/LICENSE.md) file.
